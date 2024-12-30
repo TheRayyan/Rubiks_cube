@@ -1,0 +1,85 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: blur(.5px);
+  /*   filter: blur(2px);
+    transform: scale(.8); */
+  }
+  
+  .grabbing {
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), pointer;
+    cursor: grabbing;
+  }
+  .grabbing *{
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), pointer;
+    cursor: grabbing;
+  }
+  
+  
+  .grab:hover{
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), pointer;
+    cursor: grab;
+  }
+  
+  .move:hover{
+    cursor: move;
+  }
+  
+  #container{
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+  }
+  
+  #perspective{
+    perspective: 1000px;
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+  }
+  
+  .side{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  
+  .pip{
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    transform-style: preserve-3d;
+    outline: 1px solid #222;
+  }
+  
+  *{
+    transform-style: preserve-3d;
+  }
+  
+  
+  #container.animate .pip{
+    transition: .3s;
+  }
+  
+  /* .fake-back{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    background: black;
+    transform-origin: 150px 150px -150px;
+  }
+   */
+  
